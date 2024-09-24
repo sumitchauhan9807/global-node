@@ -32,6 +32,38 @@ app.get('/overview/:lang?', function (req, res) {
   });
 });
 
+app.get('/partners/:lang?', function (req, res) {
+  req.params.lang ? req.setLocale(req.params.lang) :   req.setLocale('en')
+  res.render('partners',{
+    res:res,
+    locale:req.params.lang
+  });
+});
+
+app.get('/privacy/:lang?', function (req, res) {
+  req.params.lang ? req.setLocale(req.params.lang) :   req.setLocale('en')
+  res.render('privacy',{
+    res:res,
+    locale:req.params.lang
+  });
+});
+
+app.get('/contact/:lang?', function (req, res) {
+  req.params.lang ? req.setLocale(req.params.lang) :   req.setLocale('en')
+  res.render('contact',{
+    res:res,
+    locale:req.params.lang
+  });
+});
+
+app.get('/agb/:lang?', function (req, res) {
+  req.params.lang ? req.setLocale(req.params.lang) :   req.setLocale('en')
+  res.render('agb',{
+    res:res,
+    locale:req.params.lang
+  });
+});
+
 app.get('/:lang?', function (req, res) {
   req.params.lang ? req.setLocale(req.params.lang) :   req.setLocale('en')
    res.render('index',{

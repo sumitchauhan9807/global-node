@@ -28,7 +28,7 @@
         </div>
         <!-- END # MODAL LOGIN -->
 
-        <%- include('includes/navigation',{home: 1}); %>
+        <%- include('includes/navigation',{home: 0}); %>
 
         <section class="parallax event-section" data-stellar-background-ratio="0.5" style="background-image:url('/images/overview.png');">
             <div class="container">
@@ -121,22 +121,7 @@
        
 
 
-        <section class="section bgcolor1">
-            <div class="container">
-                <a href="#">
-                <div class="row callout">
-                    <div class="col-md-4 text-center">
-                        <h3><sup>$</sup>49.99</h3>
-                        <h4>Start your awesome course today!</h4>
-                    </div><!-- end col -->
-
-                    <div class="col-md-8">
-                        <p class="lead">Limited time offer! Your profile will be added to our "Students" directory as well. </p>
-                    </div>
-                </div><!-- end row -->
-                </a>
-            </div><!-- end container -->  
-        </section>
+        <%- include('includes/cta',{res:res}); %>
 
         <%- include('includes/footer'); %>
 

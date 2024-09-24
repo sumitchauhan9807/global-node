@@ -11,25 +11,25 @@
                   <span class="icon-bar"></span>
               </button>
               <div class="logo-normal">
-                  <a class="navbar-brand" href="index.html"><img style="height: 100px;margin: -19px;" src="images/logo.webp" alt=""></a>
+                  <a class="navbar-brand" href="index.html"><img style="height: 100px;margin: -19px;" src="/images/logo.webp" alt=""></a>
               </div>
           </div>
 
           <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/overview">Overview</a></li>
-                  <li><a href="events.html">Partners</a></li>
-                  <li><a href="events.html">Privacy Policy</a></li>
-                  <li><a href="/contact">Contact</a></li>
-                  <li><a href="page-contact.html">AGB</a></li>
+                  <li><a style="cursor: pointer;" onclick="navigate('/')"><%= res.__('40')%></a></li>
+                  <li><a  style="cursor: pointer;" onclick="navigate('overview')" ><%= res.__('41')%></a></li>
+                  <li><a style="cursor: pointer;" onclick="navigate('partners')" ><%= res.__('42')%></a></li>
+                  <li><a style="cursor: pointer;" onclick="navigate('privacy')" ><%= res.__('43')%></a></li>
+                  <li><a style="cursor: pointer;" onclick="navigate('contact')" ><%= res.__('44')%></a></li>
+                  <li><a  style="cursor: pointer;" onclick="navigate('agb')" ><%= res.__('45')%></a></li>
                   <li class="dropdown yamm-fw yamm-half"><a href="#" data-toggle="dropdown" class="dropdown-toggle active">Language <b class="fa fa-angle-down"></b></a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" id="site-langs">
                       <li>
-                          <a class="dropdown-item" onclick="reRoute('en')" href="#"><i class="flag-united-kingdom flag"></i>English <i class="fa fa-check text-success ms-2"></i></a>
+                          <a data-lang="en" class="dropdown-item" onclick="reRoute('en')" href="#"><i class="flag-united-kingdom flag"></i>English </a>
                       </li>
                       <li>
-                          <a class="dropdown-item" onclick="reRoute('de')" href="#"><i class="flag-germany flag"></i>Deutsch</a>
+                          <a data-lang="de" class="dropdown-item" onclick="reRoute('de')" href="#"><i class="flag-germany flag"></i>Deutsch</a>
                       </li>
                     </ul>
                 </li>
@@ -40,20 +40,47 @@
 </header>
 
 <script>
-    let sitePaths = ['overview','contact']
+    let sitePaths = ['overview','contact','partners','privacy','agb']
+    let siteLangs = ['en','de']
     const reRoute = (lang) => {
-        let path = window.location.pathname.split("/")
-        let webPath = path[1]
-        let redirectPath
-        if(!sitePaths.includes(webPath)) {
-            redirectPath = `/${lang}`
-        }else {
-            redirectPath = `/${webPath}/${lang}` 
-        }
-        console.log(webPath,"webPath")
-        console.log(redirectPath)
-        // console.log(webPath)
-        // console.log(`/${webPath}/${lang}`)
-        window.location.href = redirectPath
+			let path = window.location.pathname.split("/")
+			let webPath = path[1]
+			let redirectPath
+			if(!sitePaths.includes(webPath)) {
+					redirectPath = `/${lang}`
+			}else {
+					redirectPath = `/${webPath}/${lang}` 
+			}
+			console.log(webPath,"webPath")
+			console.log(redirectPath)
+			window.location.href = redirectPath
     }
+
+    const getActiveLang = () => {
+			let activeLang
+			let lastQuery = window.location.pathname.split("/").reverse()[0]
+			if(siteLangs.includes(lastQuery)) {
+				activeLang = lastQuery
+			}else {
+				activeLang = 'en'
+			}
+			return activeLang
+    }
+
+		const navigate = (url) => {
+			let activeLang = getActiveLang()
+			if(url == '/') {
+				window.location.href = `/${activeLang}`
+			}else{ 
+				window.location.href = `/${url}/${activeLang}`
+			}
+		}
+
+    window.onload = () => {
+			let activeLang = getActiveLang()
+			let x = $("#site-langs").find(`[data-lang='${activeLang}']`)
+			x.append(`<i class="fa fa-check text-success ms-2"></i>`)
+			console.log(x,"ASdsadasd")
+    }
+    
 </script>
