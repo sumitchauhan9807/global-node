@@ -45,7 +45,7 @@
         let path = window.location.pathname.split("/")
         let webPath = path[1]
         let redirectPath
-        if(sitePaths.includes(webPath)) {
+        if(!sitePaths.includes(webPath)) {
             redirectPath = `/${lang}`
         }else {
             redirectPath = `/${webPath}/${lang}` 
@@ -54,6 +54,6 @@
         console.log(redirectPath)
         // console.log(webPath)
         // console.log(`/${webPath}/${lang}`)
-        // window.location.href = redirectPath
+        window.location.href = redirectPath
     }
 </script>
