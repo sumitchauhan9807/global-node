@@ -1,0 +1,144 @@
+<%- include('includes/header'); %>
+<body>  
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <img class="preloader" src="/images/loader.gif" alt="">
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+
+    <div id="wrapper">
+        <!-- BEGIN # MODAL LOGIN -->
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Begin # DIV Form -->
+                    <div id="div-forms">
+                        <form id="login-form">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span class="flaticon-add" aria-hidden="true"></span>
+                            </button>
+                            <div class="modal-body">
+                                <input class="form-control" type="text" placeholder="What you are looking for?" required>
+                            </div>
+                        </form><!-- End # Login Form -->
+                    </div><!-- End # DIV Form -->
+                </div>
+            </div>
+        </div>
+        <!-- END # MODAL LOGIN -->
+
+        <%- include('includes/navigation',{home: 1}); %>
+
+        <section class="parallax event-section" data-stellar-background-ratio="0.5" style="background-image:url('/images/overview.png');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="tagline-message event-title text-center">
+                            <h3><%= res.__('30')%></h3>
+                            <p style="color:white"><%= res.__('31')%></p>
+                            <!-- <a href="#" class="btn btn-primary">GET TICKETS</a> -->
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section><!-- end section -->
+
+        <section class="section">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 hidden-sm hidden-xs">
+                <div class="custom-module">
+                  <img
+                  style="height: 350px;"
+                    src="/images/overview.png"
+                    alt=""
+                    class="img-responsive wow slideInLeft" />
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="custom-module p40l">
+                  <h2><%= res.__('32')%></h2>
+                  <p>
+                    <%= res.__('33')%>
+                  </p>
+                  <h2><%= res.__('34')%></h2>
+                  <p>
+                    <%= res.__('35')%>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-title text-center"><h3> <%= res.__('36')%></h3></div>
+            <div class="row text-center">
+              <img
+                src="/images/overviwe-world.webp"
+                alt=""
+                class="img-responsive" />
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <div class="section-title text-center">
+              <h3> <%= res.__('37')%></h3>
+              <p>
+                <%= res.__('38')%>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-title text-center"></div>
+            <div class="row text-center">
+              <div class="col-md-3 col-sm-3"></div>
+              <div class="col-md-6 col-sm-6">
+                <div class="teammembers">
+                  <div class="entry">
+                    <img
+                      src="/images/idris.png"
+                      alt=""
+                      class="img-responsive" />
+                  </div>
+                  <div class="teamdesc">
+                    <h4>Idris Kawa</h4>
+                    <p> <%= res.__('39')%></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-3"></div>
+            </div>
+          </div>
+        </section>
+
+       
+
+
+        <section class="section bgcolor1">
+            <div class="container">
+                <a href="#">
+                <div class="row callout">
+                    <div class="col-md-4 text-center">
+                        <h3><sup>$</sup>49.99</h3>
+                        <h4>Start your awesome course today!</h4>
+                    </div><!-- end col -->
+
+                    <div class="col-md-8">
+                        <p class="lead">Limited time offer! Your profile will be added to our "Students" directory as well. </p>
+                    </div>
+                </div><!-- end row -->
+                </a>
+            </div><!-- end container -->  
+        </section>
+
+        <%- include('includes/footer'); %>
+
+</body>
+</html>

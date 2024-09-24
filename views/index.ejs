@@ -35,18 +35,19 @@
             <div class="overlay"></div>
             <div class="home-text-wrapper relative container">
                 <div class="home-message">
-                    <p>Wilkommen Bei Uns Fachpersonal im Bereich Telemarketing und Call Centre!</p>
-                    <small>Wir Arbeiten an unsere Website für die neue gestalltung.....</small>
+                    <p><%= res.__('1')%></p>
+                    <small><%= res.__('2')%></small>
+                    <!-- <%= res.__('test')%> -->
                     <div class="btn-wrapper">
                         <div class="text-center">
-                            <a href="#" class="btn btn-primary wow slideInLeft">Read More</a> &nbsp;&nbsp;&nbsp;
+                            <a href="#" class="btn btn-primary wow slideInLeft"><%= res.__('3')%></a> &nbsp;&nbsp;&nbsp;
                             <!-- <a href="#" class="btn btn-default wow slideInRight">Buy Now</a> -->
                         </div>
                     </div><!-- end row -->
                 </div>
             </div>
             <div class="slider-bottom">
-                <span>Explore <i class="fa fa-angle-down"></i></span>
+                <span><%= res.__('4')%> <i class="fa fa-angle-down"></i></span>
             </div>
         </section>
 
@@ -55,23 +56,23 @@
         <section class="section gb">
             <div class="container">
                 <div class="section-title text-center">
-                    <h3>Projekt-und Call-Center-Lösungen</h3>
-                    <p>Schauen Sie sich unsere Dienstleistungen an..</p>
+                    <h3><%= res.__('5')%> </h3>
+                    <p><%= res.__('6')%> </p>
                 </div><!-- end title -->
 
                 <div id="owl-01" class="owl-carousel owl-theme owl-theme-01">
                     <div class="caro-item">
                         <div class="course-box">
                             <div class="image-wrap entry">
-                                <img src="upload/course_01.jpg" alt="" class="img-responsive">
+                                <img style="height:200px" src="images/callagent.webp" alt="" class="img-responsive">
                                 <div class="magnifier">
                                      <a href="#" title=""><i class="flaticon-add"></i></a>
                                 </div>
                             </div><!-- end image-wrap -->
                             <div class="course-details">
                                 <h4>
-                                    <small>Full-time/Part-time</small>
-                                    <a href="#" title="">Call Agent</a>
+                                    <small><%= res.__('7')%> </small>
+                                    <a href="#" title=""><%= res.__('8')%></a>
                                 </h4>
                                 <p>(M/W/D)</p>
                             </div><!-- end details -->
@@ -95,15 +96,15 @@
                     <div class="caro-item">
                         <div class="course-box">
                             <div class="image-wrap entry">
-                                <img src="upload/course_01.jpg" alt="" class="img-responsive">
+                                <img style="height:200px" src="images/project.jpg" alt="" class="img-responsive">
                                 <div class="magnifier">
                                      <a href="#" title=""><i class="flaticon-add"></i></a>
                                 </div>
                             </div><!-- end image-wrap -->
                             <div class="course-details">
                                 <h4>
-                                    <small>Full-time/Part-time</small>
-                                    <a href="#" title="">Projekte</a>
+                                    <small><%= res.__('7')%></small>
+                                    <a href="#" title=""><%= res.__('9')%></a>
                                 </h4>
                                 <p>(M/W/D)</p>
                             </div><!-- end details -->
@@ -126,15 +127,15 @@
                     <div class="caro-item">
                         <div class="course-box">
                             <div class="image-wrap entry">
-                                <img src="upload/course_01.jpg" alt="" class="img-responsive">
+                                <img style="height:200px" src="images/partners.jpeg" alt="" class="img-responsive">
                                 <div class="magnifier">
                                      <a href="#" title=""><i class="flaticon-add"></i></a>
                                 </div>
                             </div><!-- end image-wrap -->
                             <div class="course-details">
                                 <h4>
-                                    <small>Full-time/Part-time</small>
-                                    <a href="#" title="">Partnerschaft</a>
+                                    <small><%= res.__('7')%></small>
+                                    <a href="#" title=""><%= res.__('10')%></a>
                                 </h4>
                                 <p>(M/W/D)</p>
                             </div><!-- end details -->
@@ -157,15 +158,15 @@
                     <div class="caro-item">
                         <div class="course-box">
                             <div class="image-wrap entry">
-                                <img src="upload/course_01.jpg" alt="" class="img-responsive">
+                                <img style="height:200px" src="images/distribaution.png" alt="" class="img-responsive">
                                 <div class="magnifier">
                                      <a href="#" title=""><i class="flaticon-add"></i></a>
                                 </div>
                             </div><!-- end image-wrap -->
                             <div class="course-details">
                                 <h4>
-                                    <small>Full-time/Part-time</small>
-                                    <a href="#" title="">Vertrieb</a>
+                                    <small><%= res.__('7')%></small>
+                                    <a href="#" title=""><%= res.__('11')%></a>
                                 </h4>
                                 <p>(M/W/D)</p>
                             </div><!-- end details -->
@@ -190,7 +191,7 @@
                 <hr class="invis">
 
                 <div class="section-button text-center">
-                    <a href="#" class="btn btn-primary">View All Openings</a>
+                    <a href="#" class="btn btn-primary"><%= res.__('12')%></a>
                 </div>
             </div><!-- end container -->
         </section>
@@ -203,7 +204,7 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="stat-count">
                             <h4 class="stat-timer">1230</h4>
-                            <h3><i class="flaticon-black-graduation-cap-tool-of-university-student-for-head"></i> Happy Clients</h3>
+                            <h3><i class="flaticon-black-graduation-cap-tool-of-university-student-for-head"></i> <%= res.__('13')%></h3>
                             <p>Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis. </p>
                         </div><!-- stat-count -->
                     </div><!-- end col -->
@@ -211,7 +212,7 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="stat-count">
                             <h4 class="stat-timer">331</h4>
-                            <h3><i class="flaticon-online-course"></i> Call Centers</h3>
+                            <h3><i class="flaticon-online-course"></i> <%= res.__('14')%></h3>
                             <p>Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis. </p>
                         </div><!-- stat-count -->
                     </div><!-- end col -->
@@ -219,7 +220,7 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="stat-count">
                             <h4 class="stat-timer">8901</h4>
-                            <h3><i class="flaticon-coffee-cup"></i> Skilled Employess</h3>
+                            <h3><i class="flaticon-coffee-cup"></i><%= res.__('15')%></h3>
                             <p>Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis. </p>
                         </div><!-- stat-count -->
                     </div><!-- end col -->
@@ -231,22 +232,7 @@
 
      
 
-        <section class="section bgcolor1">
-            <div class="container">
-                <a href="#">
-                <div class="row callout">
-                    <div class="col-md-4 text-center">
-                        <h3><sup>$</sup>49.99</h3>
-                        <h4>Start your awesome course today!</h4>
-                    </div><!-- end col -->
-
-                    <div class="col-md-8">
-                        <p class="lead">Limited time offer! Your profile will be added to our "Students" directory as well. </p>
-                    </div>
-                </div><!-- end row -->
-                </a>
-            </div><!-- end container -->  
-        </section>
+        <%- include('includes/cta',{res:res}); %>
 
 <%- include('includes/footer'); %>
       

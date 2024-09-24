@@ -1,47 +1,58 @@
 <footer class="section footer noover">
   <div class="container">
       <div class="row">
-        <div class="col-lg-3 col-md-3">
+        <div class="col-lg-4 col-md-3">
             <div class="widget clearfix">
-                <h3 class="widget-title">Arbeitszeiten</h3>
+                <h3 class="widget-title"><%= res.__('18')%></h3>
                 <p>
-                  Montag — Freitag <br/>
-                  8:00 — 18:00 Uhr<br/>
-                  Samstag<br/>
+                    <%= res.__('21')%> — <%= res.__('22')%> <br/>
+                  8:00 — 18:00 Uhr<br/><br/>
+                  <%= res.__('23')%> <br/>
                   8:00 — 16:00 Uhr <br/>
-                  Sonntag Geschlossen
+                  <%= res.__('24')%> 
                 </p>
                 <a href="#" class="readmore">Contact</a>
             </div><!-- end widget -->
         </div><!-- end col -->
-        <div class="col-lg-3 col-md-3">
+        <div class="col-lg-4 col-md-3">
             <div class="widget clearfix">
-                <h3 class="widget-title">Kontact</h3>
+                <h3 class="widget-title"><%= res.__('19')%></h3>
                 <p>
-                    Mobile: +4917 2277 2888 
-                    Büro:+4921188233700 
-
-                    Fax:+4921194259397 
+                    <span class="f-item"> <%= res.__('25')%> : +4917 2277 2888 </span><br/>
+                    <span class="f-item"> <%= res.__('26')%> :+4921188233700 </span><br/>
+                    <span class="f-item"> <%= res.__('27')%> :+4921194259397 </span>
+                    
+                    
+                    
                 </p>
             </div><!-- end widget -->
         </div><!-- end col -->
 
-        <div class="col-lg-2 col-md-3">
+        <div class="col-lg-4 col-md-3">
             <div class="widget clearfix">
-                <h3 class="widget-title">Location</h3>
+                <h3 class="widget-title"><%= res.__('20')%></h3>
                 <p>
-                    Tochtergeslschaft
-                    <br/>
-                    Königsallee 19
-                    40212 Düsseldorf
-                    <br/>
-                    Hauptniederlassung <br/>
-                    Global World CC-VoIP D.O.O <br/>
-                    Belgrad / Serbia
+                    <%= res.__('28')%>
+                    <br/> 
+                    <span class="f-item">Königsallee 19</span>
+                     <br/>
+                    <span class="f-item">40212 Düsseldorf</span>
+
+                    
+                    <br/> <br/> 
+                    <span class="f-item"><%= res.__('29')%></span>
+
+                     <br/>
+                    <span class="f-item">   Global World CC-VoIP D.O.O</span>
+
+                  <br/>
+                    <span class="f-item">Belgrad / Serbia</span>
+
+                    
                 </p>
-            </div><!-- end widget -->
-        </div><!-- end col -->
-          <div class="col-lg-2 col-md-3">
+            </div>
+        </div>
+          <!-- <div class="col-lg-2 col-md-3">
             <div class="widget clearfix">
                 <h3 class="widget-title">Location</h3>
                 <p>
@@ -51,8 +62,8 @@
                     
                     Seitenstettengasse 5 / 37 1010 Wien
                 </p>
-            </div><!-- end widget -->
-        </div><!-- end col -->
+            </div>
+        </div>
         <div class="col-lg-2 col-md-3">
             <div class="widget clearfix">
                 <h3 class="widget-title">Location</h3>
@@ -64,8 +75,8 @@
                     5203 Juan Tabo Blvd. NE Suite 2b, Albuquerque
                     New Mexico 87111 USA
                 </p>
-            </div><!-- end widget -->
-        </div><!-- end col -->
+            </div>
+        </div> -->
 
           
 
@@ -97,10 +108,16 @@
 </div><!-- end wrapper -->
 
 <!-- jQuery Files -->
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/carousel.js"></script>
-<script src="js/animate.js"></script>
-<script src="js/custom.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/carousel.js"></script>
+<script src="/js/animate.js"></script>
+<script src="/js/custom.js"></script>
 <!-- VIDEO BG PLUGINS -->
-<script src="js/videobg.js"></script>
+<script src="/js/videobg.js"></script>
+
+<style>
+    .f-item {
+        margin-top: 4px;
+    }
+</style>
