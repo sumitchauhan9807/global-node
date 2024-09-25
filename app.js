@@ -66,6 +66,7 @@ app.get('/agb/:lang?', function (req, res) {
 
 app.get('/:lang?', function (req, res) {
   req.params.lang ? req.setLocale(req.params.lang) :   req.setLocale('en')
+  console.log(req.params.lang,"req.params.lang")
    res.render('index',{
      res:res,
      locale:req.params.lang

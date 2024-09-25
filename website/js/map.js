@@ -1,11 +1,11 @@
     /* ==============================================
-    MAP -->
+    MAP -->35.14022009593518, -106.51692949999999
     =============================================== */
     (function($) {
         "use strict";
-        var locations=[ ['<div class="infobox"><h3 class="title"><a href="#">OUR USA OFFICE</a></h3><span>NEW YORK CITY 2045 / 65</span><span>+90 555 666 77 88</span></div>',
-        52.370216,
-        4.895168,
+        var locations=[ ['<div class="infobox"><h3 class="title"><a href="#">OUR MEXICO OFFICE</a></h3><span>5203 Juan Tabo Blvd. NE Suite 2b, Albuquerque</span><span>+90 555 666 77 88</span></div>',
+        35.14022009593518,
+        -106.51692949999999,
         2]];
         var map=new google.maps.Map(document.getElementById('map'), {
             zoom: 12, scrollwheel: false, navigationControl: true, mapTypeControl: false, scaleControl: false, draggable: true, styles: [
@@ -87,7 +87,7 @@
             }
         ]
     }
-], center: new google.maps.LatLng(52.370216, 4.895168), mapTypeId: google.maps.MapTypeId.ROADMAP
+], center: new google.maps.LatLng(35.14022009593518, -106.51692949999999), mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         
         );
@@ -98,7 +98,7 @@
         i < locations.length;
         i++) {
             marker=new google.maps.Marker( {
-                position: new google.maps.LatLng(locations[i][1], locations[i][2]), map: map, icon: 'images/apple-touch-icon.png'
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]), map: map, icon: '/images/logos.webp'
             }
             );
             google.maps.event.addListener(marker, 'click', (function(marker, i) {

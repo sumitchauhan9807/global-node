@@ -11,7 +11,7 @@
                   <span class="icon-bar"></span>
               </button>
               <div class="logo-normal">
-                  <a class="navbar-brand" href="index.html"><img style="height: 100px;margin: -19px;" src="/images/logo.webp" alt=""></a>
+                  <a style="cursor: pointer;" onclick="navigate('/')" class="navbar-brand" ><img style="height: 100px;margin: -19px;" src="/images/logo.webp" alt=""></a>
               </div>
           </div>
 
@@ -26,10 +26,57 @@
                   <li class="dropdown yamm-fw yamm-half"><a href="#" data-toggle="dropdown" class="dropdown-toggle active">Language <b class="fa fa-angle-down"></b></a>
                     <ul class="dropdown-menu" id="site-langs">
                       <li>
-                          <a data-lang="en" class="dropdown-item" onclick="reRoute('en')" href="#"><i class="flag-united-kingdom flag"></i>English </a>
+                          <a data-lang="en" class="dropdown-item" onclick="reRoute('en')" href="#">
+                            <img style="height: 20px;" src="/images/flags/usa.png" alt=""> &nbsp;
+                            English &nbsp;
+                         </a>
                       </li>
                       <li>
-                          <a data-lang="de" class="dropdown-item" onclick="reRoute('de')" href="#"><i class="flag-germany flag"></i>Deutsch</a>
+                          <a data-lang="de" class="dropdown-item" onclick="reRoute('de')" href="#">
+                            <img style="height: 20px;" src="/images/flags/germany.png" alt=""> &nbsp;
+                            
+                            Deutsch &nbsp; </a>
+                      </li>
+                      <li>
+                        <a data-lang="fr" class="dropdown-item" onclick="reRoute('fr')" href="#">
+                          <img style="height: 20px;" src="/images/flags/france.png" alt=""> &nbsp;
+                          
+                          French &nbsp; </a>
+                    </li>
+                        <li>
+                          <a data-lang="ar" class="dropdown-item" onclick="reRoute('ar')" href="#">
+                            <img style="height: 20px;" src="/images/flags/arabic.png" alt=""> &nbsp;
+                            
+                              Arabic &nbsp; </a>
+                        </li>
+                        <li>
+                          <a data-lang="hu" class="dropdown-item" onclick="reRoute('hu')" href="#">
+                            <img style="height: 20px;" src="/images/flags/hungary.png" alt=""> &nbsp;
+                            
+                            Hungarian &nbsp; </a>
+                      </li>
+                      <li>
+                        <a data-lang="it" class="dropdown-item" onclick="reRoute('it')" href="#">
+                          <img style="height: 20px;" src="/images/flags/italy.png" alt=""> &nbsp;
+                          
+                          Italian &nbsp; </a>
+                      </li>
+                      <li>
+                        <a data-lang="ro" class="dropdown-item" onclick="reRoute('ro')" href="#">
+                          <img style="height: 20px;" src="/images/flags/romania.png" alt=""> &nbsp;
+                          
+                          Romanian &nbsp; </a>
+                      </li>
+                      <li>
+                        <a data-lang="ru" class="dropdown-item" onclick="reRoute('ru')" href="#">
+                          <img style="height: 20px;" src="/images/flags/russia.png" alt=""> &nbsp;
+                          
+                          Russian &nbsp; </a>
+                      </li>
+                      <li>
+                        <a data-lang="se" class="dropdown-item" onclick="reRoute('se')" href="#">
+                          <img style="height: 20px;" src="/images/flags/serbia.png" alt=""> &nbsp;
+                          Serbian &nbsp; </a>
                       </li>
                     </ul>
                 </li>
@@ -41,7 +88,7 @@
 
 <script>
     let sitePaths = ['overview','contact','partners','privacy','agb']
-    let siteLangs = ['en','de']
+    let siteLangs = ['en','de','fr','ar','hu','it','ro','ru','se']
     const reRoute = (lang) => {
 			let path = window.location.pathname.split("/")
 			let webPath = path[1]
